@@ -6,57 +6,30 @@ const printHeads = (heads) => {
   let newString = '';
   heads.forEach((head) => {
     newString += `
-      <div id="${head.id}"class="head card col-md-3 px-0 m-3" style="width: 18rem;">
-        <div class="card-body">
-          <div class="thumbnail mb-3">
-          <img src="${head.imageUrl}" 
-          alt="" width="100%">
-        </div>
-        <div class=" card-footer mt-auto">
-          <p class="text-center">${head.name}</p>
-        </div>
-      </div>
+      <a class="dropdown-item" id="${head.id}"><img src="${head.imageUrl}"></a>
     `;
   });
-  $('#heads-div').html(newString);
+  $('#head-links').html(newString);
 };
 
 const printTorsos = (torsos) => {
   let newString = '';
   torsos.forEach((torso) => {
     newString += `
-      <div id="${torso.id}"class="head card col-md-3 px-0 m-3" style="width: 18rem;">
-        <div class="card-body">
-          <div class="thumbnail mb-3">
-          <img src="${torso.imageUrl}" 
-          alt="" width="100%">
-        </div>
-        <div class=" card-footer mt-auto">
-          <p class="text-center">Locations Used: ${torso.name}</p>
-        </div>
-      </div>
+      <a class="dropdown-item" id="${torso.id}"><img src="${torso.imageUrl}"></a>
     `;
   });
-  $('#torsos-div').html(newString);
+  $('#torso-links').html(newString);
 };
 
 const printLegs = (legs) => {
   let newString = '';
   legs.forEach((leg) => {
     newString += `
-      <div id="${leg.id}"class="head card col-md-3 px-0 m-3" style="width: 18rem;">
-        <div class="card-body">
-          <div class="thumbnail mb-3">
-          <img src="${leg.imageUrl}" 
-          alt="" width="100%">
-        </div>
-        <div class=" card-footer mt-auto">
-          <p class="text-center">${leg.name}</p>
-        </div>
-      </div>
+      <a class="dropdown-item" id="${leg.id}"><img src="${leg.imageUrl}"></a>
     `;
   });
-  $('#legs-div').html(newString);
+  $('#leg-links').html(newString);
 };
 
 const getHeads = () => {
