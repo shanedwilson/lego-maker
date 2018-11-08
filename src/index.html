@@ -11,35 +11,41 @@
 
   <div class="row justify-content-around" id="dropdown-div">
     <div class="head-dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Heads
       </button>
       <div id="head-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
     </div>
 
     <div class="torso-dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-danger dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Torsos
       </button>
       <div id="torso-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
     </div>
 
     <div class="leg-dropdown">
-      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn btn-success dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Legs
       </button>
       <div id="leg-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
-    </div>    
+    </div>
+
+    <div id="random-button">
+      <button type="button" class="btn btn-primary btn-sm">Randomize!</button>
+    </div> 
 
   </div>
 
-  <div class="row" id="name-div"></div>
+  <div class="name" id="name-div"></div>
 
-  <div class="row" id="heads-div"></div>
-
-  <div class="row" id="torsos-div"></div>
-
-  <div class="row" id="legs-div"></div>
+  <div id="image-container">
+    <div class="image-div">
+      <div id="heads-div"></div>
+      <div id="torsos-div"></div>
+      <div id="legs-div"></div>
+    </div>  
+  </div>  
 
 </body>
 </html>

@@ -1,41 +1,44 @@
 import 'bootstrap';
 import $ from 'jquery';
+import './legoCharacter.scss';
 import partsData from '../data/partsData';
+import dropdown from '../dropdown/dropdown';
 
-const printHeads = (heads) => {
+const initHeadView = (heads) => {
   let newString = '';
-  heads.forEach((head) => {
-    newString += `
-      <a class="dropdown-item" id="${head.id}"><img src="${head.imageUrl}"></a>
+  const randomize = Math.floor(Math.random() * heads.length);
+  newString += `
+      <div class="head" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}"></div>
     `;
-  });
-  $('#head-links').html(newString);
+  $('#heads-div').html(newString);
+  $('#name-div').append(`<span>${heads[randomize].name}</span>`);
 };
 
-const printTorsos = (torsos) => {
+const initTorsoView = (torsos) => {
   let newString = '';
-  torsos.forEach((torso) => {
-    newString += `
-      <a class="dropdown-item" id="${torso.id}"><img src="${torso.imageUrl}"></a>
+  const randomize = Math.floor(Math.random() * torsos.length);
+  newString += `
+      <div class="torso" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}"></div>
     `;
-  });
-  $('#torso-links').html(newString);
+  $('#torsos-div').html(newString);
+  $('#name-div').append(`<span>${torsos[randomize].name}</span>`);
 };
 
-const printLegs = (legs) => {
+const initLegView = (legs) => {
   let newString = '';
-  legs.forEach((leg) => {
-    newString += `
-      <a class="dropdown-item" id="${leg.id}"><img src="${leg.imageUrl}"></a>
+  const randomize = Math.floor(Math.random() * legs.length);
+  newString += `
+      <div class="leg" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}"></div>
     `;
-  });
-  $('#leg-links').html(newString);
+  $('#legs-div').html(newString);
+  $('#name-div').append(`<span>${legs[randomize].name}</span>`);
 };
 
 const getHeads = () => {
   partsData.loadHeads()
     .then((heads) => {
-      printHeads(heads.data);
+      dropdown.printHeads(heads.data);
+      initHeadView(heads.data);
     })
     .catch((error) => {
       console.error({ error });
@@ -45,7 +48,8 @@ const getHeads = () => {
 const getTorsos = () => {
   partsData.loadTorsos()
     .then((torsos) => {
-      printTorsos(torsos.data);
+      dropdown.printTorsos(torsos.data);
+      initTorsoView(torsos.data);
     })
     .catch((error) => {
       console.error({ error });
@@ -55,11 +59,14 @@ const getTorsos = () => {
 const getLegs = () => {
   partsData.loadLegs()
     .then((legs) => {
-      printLegs(legs.data);
+      dropdown.printLegs(legs.data);
+      initLegView(legs.data);
     })
     .catch((error) => {
       console.error({ error });
     });
 };
 
-export default { getHeads, getTorsos, getLegs };
+export default {
+  getHeads, getTorsos, getLegs,
+};
