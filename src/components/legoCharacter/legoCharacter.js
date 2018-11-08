@@ -11,7 +11,8 @@ const initHeadView = (heads) => {
       <div class="head" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}"></div>
     `;
   $('#heads-div').html(newString);
-  $('#name-div').append(`<span>${heads[randomize].name}</span>`);
+  $('#head-name').html();
+  $('#head-name').html(heads[randomize].name);
 };
 
 const initTorsoView = (torsos) => {
@@ -21,7 +22,8 @@ const initTorsoView = (torsos) => {
       <div class="torso" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}"></div>
     `;
   $('#torsos-div').html(newString);
-  $('#name-div').append(`<span>${torsos[randomize].name}</span>`);
+  $('#torso-name').html();
+  $('#torso-name').html(torsos[randomize].name);
 };
 
 const initLegView = (legs) => {
@@ -31,7 +33,8 @@ const initLegView = (legs) => {
       <div class="leg" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}"></div>
     `;
   $('#legs-div').html(newString);
-  $('#name-div').append(`<span>${legs[randomize].name}</span>`);
+  $('#leg-name').html();
+  $('#leg-name').html(legs[randomize].name);
 };
 
 const customHeadView = (head) => {
@@ -40,7 +43,8 @@ const customHeadView = (head) => {
       <div class="head" id="${head.id}"><img src="${head.imageUrl}"></div>
   `;
   $('#heads-div').html(newString);
-  $('#name-div').append(`<span>${head.name}</span>`);
+  $('#head-name').html();
+  $('#head-name').html(head.name);
 };
 
 const customTorsoView = (torso) => {
@@ -49,7 +53,8 @@ const customTorsoView = (torso) => {
       <div class="torso" id="${torso.id}"><img src="${torso.imageUrl}"></div>
   `;
   $('#torsos-div').html(newString);
-  $('#name-div').append(`<span>${torso.name}</span>`);
+  $('#torso-name').html();
+  $('#torso-name').html(torso.name);
 };
 
 const customLegView = (leg) => {
@@ -58,7 +63,8 @@ const customLegView = (leg) => {
       <div class="leg" id="${leg.id}"><img src="${leg.imageUrl}"></div>
   `;
   $('#legs-div').html(newString);
-  $('#name-div').append(`<span>${leg.name}</span>`);
+  $('#leg-name').html();
+  $('#leg-name').html(leg.name);
 };
 
 const selectedHead = (clickedHead) => {

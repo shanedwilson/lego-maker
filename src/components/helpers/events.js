@@ -32,7 +32,6 @@ const dropLegEvent = () => {
 
 const randomBtnEvent = () => {
   $('#random-button').on(('click'), () => {
-    $('#name-div').empty();
     legoCharacter.getHeads();
     legoCharacter.getTorsos();
     legoCharacter.getLegs();
