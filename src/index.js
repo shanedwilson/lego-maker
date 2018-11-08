@@ -1,4 +1,3 @@
-// import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
 import legoCharacter from './components/legoCharacter/legoCharacter';
@@ -10,7 +9,9 @@ const initApp = () => {
   legoCharacter.getTorsos();
   legoCharacter.getLegs();
   savedCharacters.saved();
-  events.dropLinkEvents();
+  events.dropHeadEvent();
+  events.dropTorsoEvent();
+  events.dropLegEvent();
   events.randomBtnEvent();
 };
 

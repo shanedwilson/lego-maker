@@ -11,7 +11,8 @@ const initHeadView = (heads) => {
       <div class="head" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}"></div>
     `;
   $('#heads-div').html(newString);
-  $('#name-div').append(`<span>${heads[randomize].name}</span>`);
+  $('#head-name').html();
+  $('#head-name').html(heads[randomize].name);
 };
 
 const initTorsoView = (torsos) => {
@@ -21,7 +22,8 @@ const initTorsoView = (torsos) => {
       <div class="torso" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}"></div>
     `;
   $('#torsos-div').html(newString);
-  $('#name-div').append(`<span>${torsos[randomize].name}</span>`);
+  $('#torso-name').html();
+  $('#torso-name').html(torsos[randomize].name);
 };
 
 const initLegView = (legs) => {
@@ -31,7 +33,71 @@ const initLegView = (legs) => {
       <div class="leg" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}"></div>
     `;
   $('#legs-div').html(newString);
-  $('#name-div').append(`<span>${legs[randomize].name}</span>`);
+  $('#leg-name').html();
+  $('#leg-name').html(legs[randomize].name);
+};
+
+const customHeadView = (head) => {
+  let newString = '';
+  newString += `
+      <div class="head" id="${head.id}"><img src="${head.imageUrl}"></div>
+  `;
+  $('#heads-div').html(newString);
+  $('#head-name').html();
+  $('#head-name').html(head.name);
+};
+
+const customTorsoView = (torso) => {
+  let newString = '';
+  newString += `
+      <div class="torso" id="${torso.id}"><img src="${torso.imageUrl}"></div>
+  `;
+  $('#torsos-div').html(newString);
+  $('#torso-name').html();
+  $('#torso-name').html(torso.name);
+};
+
+const customLegView = (leg) => {
+  let newString = '';
+  newString += `
+      <div class="leg" id="${leg.id}"><img src="${leg.imageUrl}"></div>
+  `;
+  $('#legs-div').html(newString);
+  $('#leg-name').html();
+  $('#leg-name').html(leg.name);
+};
+
+const selectedHead = (clickedHead) => {
+  partsData.loadHeads()
+    .then((heads) => {
+      heads.data.forEach((customHead) => {
+        if (clickedHead === customHead.id) {
+          customHeadView(customHead);
+        }
+      });
+    });
+};
+
+const selectedTorso = (clickedTorso) => {
+  partsData.loadTorsos()
+    .then((torsos) => {
+      torsos.data.forEach((customTorso) => {
+        if (clickedTorso === customTorso.id) {
+          customTorsoView(customTorso);
+        }
+      });
+    });
+};
+
+const selectedLeg = (clickedLeg) => {
+  partsData.loadLegs()
+    .then((legs) => {
+      legs.data.forEach((customLeg) => {
+        if (clickedLeg === customLeg.id) {
+          customLegView(customLeg);
+        }
+      });
+    });
 };
 
 const getHeads = () => {
@@ -68,5 +134,5 @@ const getLegs = () => {
 };
 
 export default {
-  getHeads, getTorsos, getLegs,
+  getHeads, getTorsos, getLegs, selectedHead, selectedTorso, selectedLeg,
 };
