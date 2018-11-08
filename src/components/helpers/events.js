@@ -26,7 +26,6 @@ const dropLegEvent = () => {
       .closest('.dropdown-item')
       .attr('type');
     legoCharacter.selectedLeg(selectedLeg);
-    console.log(selectedLeg);
   });
 };
 
