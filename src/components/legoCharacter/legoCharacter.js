@@ -34,6 +34,10 @@ const initLegView = (legs) => {
   $('#name-div').append(`<span>${legs[randomize].name}</span>`);
 };
 
+const selectedHead = (selectedHeadId) => {
+
+};
+
 const getHeads = () => {
   partsData.loadHeads()
     .then((heads) => {
@@ -68,5 +72,5 @@ const getLegs = () => {
 };
 
 export default {
-  getHeads, getTorsos, getLegs,
+  getHeads, getTorsos, getLegs, selectedHead,
 };

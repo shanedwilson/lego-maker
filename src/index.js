@@ -10,7 +10,7 @@ const initApp = () => {
   legoCharacter.getTorsos();
   legoCharacter.getLegs();
   savedCharacters.saved();
-  events.dropLinkEvents();
+  events.dropHeadEvent();
   events.randomBtnEvent();
 };
 

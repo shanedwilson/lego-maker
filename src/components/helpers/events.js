@@ -2,12 +2,12 @@ import 'bootstrap';
 import $ from 'jquery';
 import legoCharacter from '../legoCharacter/legoCharacter';
 
-const dropLinkEvents = () => {
+const dropHeadEvent = () => {
   $('#dropdown-div').on(('click'), (e) => {
-    const selectedPart = $(e.target)
+    const selectedHead = $(e.target)
       .closest('a')
       .attr('id');
-    console.log(selectedPart);
+    legoCharacter.selectedHead(selectedHead);
   });
 };
 
@@ -20,4 +20,4 @@ const randomBtnEvent = () => {
   });
 };
 
-export default { dropLinkEvents, randomBtnEvent };
+export default { dropHeadEvent, randomBtnEvent };
