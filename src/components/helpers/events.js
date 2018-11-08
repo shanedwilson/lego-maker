@@ -3,11 +3,30 @@ import $ from 'jquery';
 import legoCharacter from '../legoCharacter/legoCharacter';
 
 const dropHeadEvent = () => {
-  $('#dropdown-div').on(('click'), (e) => {
+  $('#head-links').on(('click'), (e) => {
     const selectedHead = $(e.target)
-      .closest('a')
-      .attr('id');
+      .closest('.dropdown-item')
+      .attr('type');
     legoCharacter.selectedHead(selectedHead);
+  });
+};
+
+const dropTorsoEvent = () => {
+  $('#torso-links').on(('click'), (e) => {
+    const selectedTorso = $(e.target)
+      .closest('.dropdown-item')
+      .attr('type');
+    legoCharacter.selectedTorso(selectedTorso);
+  });
+};
+
+const dropLegEvent = () => {
+  $('#leg-links').on(('click'), (e) => {
+    const selectedLeg = $(e.target)
+      .closest('.dropdown-item')
+      .attr('type');
+    legoCharacter.selectedLeg(selectedLeg);
+    console.log(selectedLeg);
   });
 };
 
@@ -20,4 +39,6 @@ const randomBtnEvent = () => {
   });
 };
 
-export default { dropHeadEvent, randomBtnEvent };
+export default {
+  dropHeadEvent, randomBtnEvent, dropTorsoEvent, dropLegEvent,
+};
