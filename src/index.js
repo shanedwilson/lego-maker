@@ -11,6 +11,7 @@ const initApp = () => {
   legoCharacter.getLegs();
   savedCharacters.saved();
   events.dropLinkEvents();
+  events.randomBtnEvent();
 };
 
 initApp();

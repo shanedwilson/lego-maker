@@ -1,8 +1,21 @@
-.dropdown-item{
-  img {
-    display: inline-block;
-    padding-left: 20px;
-    max-width: 40px;
-    max-height: 40px;
-  }
+@import '~bootstrap/scss/bootstrap';
+
+#name-div {
+  margin-top: 5%;
+  text-align: center;
+  font-size: 3em;
 }
+
+
+#image-container {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .image-div{
+    img {
+      max-width: 300px;
+      max-height: 300px;
+    }
+  }
+}  
