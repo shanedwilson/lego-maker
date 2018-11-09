@@ -6,12 +6,20 @@ const printSavedCharacter = (savedCharacters) => {
   let newString = '';
   savedCharacters.forEach((savedCharacter) => {
     newString += `
-      <div class="saved-character col" >
-      <p>${savedCharacter.name}</p>
-      <img src="${savedCharacter.head}">
-      <img src="${savedCharacter.torso}">
-      <img src="${savedCharacter.leg}">
-      </div>
+      <div class="col-sm-2">
+        <div class="card saved-character" style="width: 18rem">
+          <p class="text-center">${savedCharacter.name}</p>
+          <div class="text-center">
+            <img class="card-img" src="${savedCharacter.head}">
+          </div>
+          <div class="text-center"> 
+            <img class="card-img" src="${savedCharacter.torso}">
+          </div> 
+          <div class="text-center">
+            <img class="card-img" src="${savedCharacter.leg}">
+          </div> 
+        </div>
+      </div>  
   `;
   });
   $('.saved-image-div').html(newString);

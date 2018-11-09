@@ -1,5 +1,13 @@
 @import '~bootstrap/scss/bootstrap';
 
-#save-btn-container {
-  margin: auto;
+h3 {
+  text-align: center;
+}
+
+.saved-character {
+  margin-top: 5%;
+  img {
+    max-width: 70px;
+    max-height: 70px;
+  }
 }
