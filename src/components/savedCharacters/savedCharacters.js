@@ -28,13 +28,11 @@ const savedLegView = (leg) => {
 };
 
 const savedHeadData = (savedHeadId) => {
-  console.log(savedHeadId);
   partsData.loadHeads()
     .then((heads) => {
       heads.data.forEach((savedHead) => {
         if (savedHeadId === savedHead.id) {
           savedHeadView(savedHead);
-          console.log(savedHead);
         }
       });
     });
