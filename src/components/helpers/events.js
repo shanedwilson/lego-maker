@@ -1,6 +1,9 @@
 import 'bootstrap';
 import $ from 'jquery';
 import legoCharacter from '../legoCharacter/legoCharacter';
+import savedCharacters from '../savedCharacters/savedCharacters';
+
+const savedArray = [];
 
 const dropHeadEvent = () => {
   $('#head-links').on(('click'), (e) => {
@@ -37,6 +40,19 @@ const randomBtnEvent = () => {
   });
 };
 
+const saveBtnEvent = () => {
+  $('#save-button').on(('click'), () => {
+    const name = $('#name-div').text();
+    const head = $('#heads-div').find('img').attr('src');
+    const torso = $('#torsos-div').find('img').attr('src');
+    const leg = $('#legs-div').find('img').attr('src');
+    savedArray.push({
+      name, head, torso, leg,
+    });
+    savedCharacters.printSavedCharacter(savedArray);
+  });
+};
+
 export default {
-  dropHeadEvent, randomBtnEvent, dropTorsoEvent, dropLegEvent,
+  dropHeadEvent, randomBtnEvent, dropTorsoEvent, dropLegEvent, saveBtnEvent,
 };
