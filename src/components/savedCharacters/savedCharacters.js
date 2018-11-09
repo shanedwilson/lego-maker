@@ -1,65 +1,23 @@
 import 'bootstrap';
 import $ from 'jquery';
 import './savedCharacters.scss';
-import partsData from '../data/partsData';
 
-const savedHeadView = (head) => {
+const printSavedCharacter = (savedCharacters) => {
   let newString = '';
-  newString += `
-      <div class="saved-head"><img src="${head.imageUrl}"></div>
+  savedCharacters.forEach((savedCharacter) => {
+    console.log(savedCharacter.name);
+    newString += `
+      <div class="saved-character col" >
+      <p>${savedCharacter.name}</p>
+      <img src="${savedCharacter.head}">
+      <img src="${savedCharacter.torso}">
+      <img src="${savedCharacter.leg}">
+      </div>
   `;
-  $('#saved-heads-div').append(newString);
-};
-
-const savedTorsoView = (torso) => {
-  let newString = '';
-  newString += `
-      <div class="saved-torso"><img src="${torso.imageUrl}"></div>
-  `;
-  $('#saved-torsos-div').append(newString);
-};
-
-const savedLegView = (leg) => {
-  let newString = '';
-  newString += `
-      <div class="saved-leg"><img src="${leg.imageUrl}"></div>
-  `;
-  $('#saved-legs-div').append(newString);
-};
-
-const savedHeadData = (savedHeadId) => {
-  partsData.loadHeads()
-    .then((heads) => {
-      heads.data.forEach((savedHead) => {
-        if (savedHeadId === savedHead.id) {
-          savedHeadView(savedHead);
-        }
-      });
-    });
-};
-
-const savedTorsoData = (savedTorsoId) => {
-  partsData.loadTorsos()
-    .then((torsos) => {
-      torsos.data.forEach((savedTorso) => {
-        if (savedTorsoId === savedTorso.id) {
-          savedTorsoView(savedTorso);
-        }
-      });
-    });
-};
-
-const savededLegData = (savedLegId) => {
-  partsData.loadLegs()
-    .then((legs) => {
-      legs.data.forEach((savedLeg) => {
-        if (savedLegId === savedLeg.id) {
-          savedLegView(savedLeg);
-        }
-      });
-    });
+    $('.saved-image-div').append(newString);
+  });
 };
 
 export default {
-  savedHeadData, savedTorsoData, savededLegData,
+  printSavedCharacter,
 };
