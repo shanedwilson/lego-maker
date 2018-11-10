@@ -1,0 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
+@mixin default-font ($fontsize) {
+  font-size: $fontsize;
+  font-family: 'Orbitron', sans-serif;
+}

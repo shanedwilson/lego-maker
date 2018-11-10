@@ -7,59 +7,68 @@
   <title>Lego Builder</title>
 </head>
 <body>
-  <div class="body-div">
-  <h1>Lego Builder!</h1>
 
-  <div class="row justify-content-around" id="dropdown-div">
-    <div class="head-dropdown">
-      <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Heads
-      </button>
-      <div id="head-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Lego Builder!</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Heads
+          </a>
+          <div id="head-links" class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Torsos
+          </a>
+          <div id="torso-links" class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Legs
+          </a>
+          <div id="leg-links" class="dropdown-menu" aria-labelledby="navbarDropdown"></div>
+        </li>
+        <li id="random-button" class="nav-item">
+          <a class="nav-link">Ramdomize <span class="sr-only">(current)</span></a>
+        </li>
+        <li id="save-button" class="nav-item">
+          <a class="nav-link">Save Character <span class="sr-only">(current)</span></a>
+        </li>        
+      </ul>
     </div>
+  </nav>
 
-    <div class="torso-dropdown">
-      <button class="btn btn-danger dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Torsos
-      </button>
-      <div id="torso-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
-    </div>
-
-    <div class="leg-dropdown">
-      <button class="btn btn-success dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Legs
-      </button>
-      <div id="leg-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
-    </div>
-
-    <div id="random-button">
-      <button type="button" class="btn btn-secondary btn-sm">Randomize!</button>
-    </div> 
-
-    <div id="save-button">
-        <button type="button" class="btn btn-primary btn-sm">Save Character</button>
-    </div>
-
-  </div>
-
-  <div class="name" id="name-div">
-    <span id="head-name"></span>
-    <span id="torso-name"></span>
-    <span id="leg-name"></span>
-  </div>
-
-  <div id="image-container">
-    <div class="image-div">
-      <div id="heads-div"></div>
-      <div id="torsos-div"></div>
-      <div id="legs-div"></div>
+  <div class="character-container">
+    <div class="row">
+      <button id="back-btn" type="button" class="btn btn-secondary ml-auto mt-3 mr-3">Show Saved Characters</button>
     </div>  
-  </div>
+    <div id="built-character">
+      <div class="name" id="name-div">
+        <span id="head-name"></span>
+        <span id="torso-name"></span>
+        <span id="leg-name"></span>
+      </div>  
 
-  <div id="saved-image-container">
-    <h3>Saved Characters</h3>
-    <div class="saved-image-div row"></div>  
-  </div>
-</div>
+
+      <div id="image-container">
+        <div class="image-div">
+          <div id="heads-div"></div>
+          <div id="torsos-div"></div>
+          <div id="legs-div"></div>
+        </div>  
+      </div>
+    </div>
+
+    <div id="saved-image-container">
+      <h1>Saved Characters</h1>
+      <div class="saved-image-div row"></div>  
+    </div>
+  </div>  
 </body>
 </html>
