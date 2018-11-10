@@ -1,7 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 
 body {
-  background-color: aqua;
+    background-image: radial-gradient(red, yellow, blue) !important;
+    background-attachment: fixed
 }
 
 h1 {
