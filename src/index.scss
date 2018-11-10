@@ -1,10 +1,9 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+
 
 body {
     background-image: radial-gradient(red, yellow, blue) !important;
     background-attachment: fixed
 }
 
-h1 {
-  text-align: center;
-}
