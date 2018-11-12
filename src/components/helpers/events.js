@@ -43,6 +43,7 @@ const randomBtnEvent = () => {
 const saveBtnEvent = () => {
   $('#save-button').on(('click'), () => {
     $('#back-btn').text('Back To Builder');
+    $('#back-btn').show();
     $('#saved-image-container').show();
     $('#built-character').hide();
     $('.navbar-nav').hide();
