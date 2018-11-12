@@ -45,7 +45,7 @@ const customHeadView = (head) => {
   $('#heads-div').html(newString);
   $('#head-name').html();
   $('#head-name').html(head.name);
-  $('#heads-div').fadeIn(500);
+  $('#heads-div').slideDown(500);
 };
 
 const customTorsoView = (torso) => {
@@ -56,6 +56,7 @@ const customTorsoView = (torso) => {
   $('#torsos-div').html(newString);
   $('#torso-name').html();
   $('#torso-name').html(torso.name);
+  $('#torsos-div').slideDown(500);
 };
 
 const customLegView = (leg) => {
@@ -66,9 +67,11 @@ const customLegView = (leg) => {
   $('#legs-div').html(newString);
   $('#leg-name').html();
   $('#leg-name').html(leg.name);
+  $('#legs-div').slideDown(500);
 };
 
 const selectedHead = (clickedHead) => {
+  $('#heads-div').fadeOut(10);
   partsData.loadHeads()
     .then((heads) => {
       heads.data.forEach((customHead) => {
@@ -80,6 +83,7 @@ const selectedHead = (clickedHead) => {
 };
 
 const selectedTorso = (clickedTorso) => {
+  $('#torsos-div').fadeOut(10);
   partsData.loadTorsos()
     .then((torsos) => {
       torsos.data.forEach((customTorso) => {
@@ -91,6 +95,7 @@ const selectedTorso = (clickedTorso) => {
 };
 
 const selectedLeg = (clickedLeg) => {
+  $('#legs-div').fadeOut(10);
   partsData.loadLegs()
     .then((legs) => {
       legs.data.forEach((customLeg) => {
