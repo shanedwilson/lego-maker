@@ -7,6 +7,7 @@ const savedArray = [];
 
 const dropHeadEvent = () => {
   $('#head-links').on(('click'), (e) => {
+    $('#heads-div').fadeOut(500);
     const selectedHead = $(e.target)
       .closest('.dropdown-item')
       .attr('type');
@@ -43,6 +44,7 @@ const randomBtnEvent = () => {
 const saveBtnEvent = () => {
   $('#save-button').on(('click'), () => {
     $('#back-btn').text('Back To Builder');
+    $('#back-btn').show();
     $('#saved-image-container').show();
     $('#built-character').hide();
     $('.navbar-nav').hide();

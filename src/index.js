@@ -5,6 +5,7 @@ import legoCharacter from './components/legoCharacter/legoCharacter';
 import events from './components/helpers/events';
 
 const initApp = () => {
+  $('#back-btn').hide();
   legoCharacter.getHeads();
   legoCharacter.getTorsos();
   legoCharacter.getLegs();

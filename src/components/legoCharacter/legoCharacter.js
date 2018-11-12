@@ -45,6 +45,7 @@ const customHeadView = (head) => {
   $('#heads-div').html(newString);
   $('#head-name').html();
   $('#head-name').html(head.name);
+  $('#heads-div').fadeIn(500);
 };
 
 const customTorsoView = (torso) => {
