@@ -1,35 +1,25 @@
 # Lego Builder
 
+For this project we needed to access a database of lego body parts and display them. The user shouuld then be able to select new parts or randomize them and save the characters if they choose. I opted to do both selcetion and randomziation.
+
 This assignment is inspired in part by [this pretty nifty book](https://www.youtube.com/watch?v=tDnDrO7neUE) 📖
 
-## Setup
+![Main Screenshot](./img/main-view.png)
+![Second Screenshot](./img/saved-character-view.png)
 
-You will have at least this many files with your setup:
-```
-|- db
-    |- parts.json
-|- src
-    |- components
-        |- LegoCharacter
-            |- legoCharacter.js
-            |- legoCharacter.scss
-        |- SavedCharacters
-            |- savedCharacters.js
-            |- savedCharacters.scss
-    |- data
-        |- partsData.js
-    |- index.js
-    |- index.scss
-    |- index.html
-|- .eslintignore
-|- .eslintrc
-|- .gitignore
-|- package.json
-|- README.md
-|- webpack.config.js
-```
+### Technologies Used
+* SASS
+* Webpack
+* Axios
+* ES6 Modules
+* Bootstrap4
+* jQuery
 
-## Requirements
+### How to run this app
 
-- Use [SASS](https://sass-lang.com/guide) for styling your page and components.
-- When the user loads the page, they should see a head, a torso, and legs printed together on the page. This is your lego character.
+1.  Serve up the app
+* At the root of the project: `npm install`
+* Add a terminal
+* `npm run parts`
+* Return to first terminal
+* `npm start`
