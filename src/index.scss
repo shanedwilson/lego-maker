@@ -5,7 +5,10 @@
 body {
     background-attachment: fixed;
     background:  linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)),
-                url('http://www.printawallpaper.com/upload/designs/Lego_Blocks_dn.jpg');}
+                url('https://c1.staticflickr.com/3/2387/2079485687_0f407d2fc2_b.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;            
+}
 
 #name-div {
     text-shadow: 1px 1px 2px white;
