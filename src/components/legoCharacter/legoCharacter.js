@@ -109,8 +109,8 @@ const selectedLeg = (clickedLeg) => {
 const getHeads = () => {
   partsData.loadHeads()
     .then((heads) => {
-      dropdown.printHeads(heads.data);
-      initHeadView(heads.data);
+      dropdown.printHeads(heads);
+      initHeadView(heads);
     })
     .catch((error) => {
       console.error({ error });
@@ -120,8 +120,8 @@ const getHeads = () => {
 const getTorsos = () => {
   partsData.loadTorsos()
     .then((torsos) => {
-      dropdown.printTorsos(torsos.data);
-      initTorsoView(torsos.data);
+      dropdown.printTorsos(torsos);
+      initTorsoView(torsos);
     })
     .catch((error) => {
       console.error({ error });
@@ -131,8 +131,8 @@ const getTorsos = () => {
 const getLegs = () => {
   partsData.loadLegs()
     .then((legs) => {
-      dropdown.printLegs(legs.data);
-      initLegView(legs.data);
+      dropdown.printLegs(legs);
+      initLegView(legs);
     })
     .catch((error) => {
       console.error({ error });
