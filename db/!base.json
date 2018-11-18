@@ -1,0 +1,11 @@
+{
+	"heads": {
+		"head1": "cool"
+	},
+	"torsos": {
+		"torso1": "good"
+	},
+  "legs": {
+		"leg1": "alright"
+	},
+}
