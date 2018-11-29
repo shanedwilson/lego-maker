@@ -15,7 +15,7 @@ This assignment is inspired in part by [this pretty nifty book](https://www.yout
 * Bootstrap4
 * jQuery
 
-###How to run this app
+### How to run this app
 Please Note: A Firebase account is needed to run this app
 
 1. Configure Firebase
@@ -25,7 +25,7 @@ Please Note: A Firebase account is needed to run this app
 * Create a new project in Firebase
 * Copy the keys from Firebase into the apiKeys.json file
 * Create a realtime databse in Firebase, and start in test mode
-* Import ./db/tasks.json into the Firebase database to seed data
+* Import ./db/parts.json into the Firebase database to seed data
 
 2. Serve up the app
 * Run ```npm start``` in your terminal to initiate the app.
