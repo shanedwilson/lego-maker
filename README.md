@@ -14,6 +14,7 @@ This assignment is inspired in part by [this pretty nifty book](https://www.yout
 * ES6 Modules
 * Bootstrap4
 * jQuery
+* Firebase
 
 ### How to run this app
 Please Note: A Firebase account is needed to run this app
