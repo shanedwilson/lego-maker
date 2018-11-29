@@ -26,7 +26,7 @@ Please Note: A Firebase account is needed to run this app
 * Create a new project in Firebase
 * Copy the keys from Firebase into the apiKeys.json file
 * Create a realtime databse in Firebase, and start in test mode
-* Import ./db/parts.json into the Firebase database to seed data
+* Import parts.json into the Firebase database to seed data
 
 2. Serve up the app
 * Run ```npm start``` in your terminal to initiate the app.
