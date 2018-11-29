@@ -15,11 +15,17 @@ This assignment is inspired in part by [this pretty nifty book](https://www.yout
 * Bootstrap4
 * jQuery
 
-### How to run this app
+###How to run this app
+Please Note: A Firebase account is needed to run this app
 
-1.  Serve up the app
-* At the root of the project: `npm install`
-* Add a terminal
-* `npm run parts`
-* Return to first terminal
-* `npm start`
+1. Configure Firebase
+* Clone the repository to your computer
+* In your terminal ```npm install```
+* Rename apiKeys.json.example to apiKeys.json in the db folder
+* Create a new project in Firebase
+* Copy the keys from Firebase into the apiKeys.json file
+* Create a realtime databse in Firebase, and start in test mode
+* Import ./db/tasks.json into the Firebase database to seed data
+
+2. Serve up the app
+* Run ```npm start``` in your terminal to initiate the app.
