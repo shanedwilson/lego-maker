@@ -74,7 +74,7 @@ const selectedHead = (clickedHead) => {
   $('#heads-div').fadeOut(10);
   partsData.loadHeads()
     .then((heads) => {
-      heads.data.forEach((customHead) => {
+      heads.forEach((customHead) => {
         if (clickedHead === customHead.id) {
           customHeadView(customHead);
         }
@@ -86,7 +86,7 @@ const selectedTorso = (clickedTorso) => {
   $('#torsos-div').fadeOut(10);
   partsData.loadTorsos()
     .then((torsos) => {
-      torsos.data.forEach((customTorso) => {
+      torsos.forEach((customTorso) => {
         if (clickedTorso === customTorso.id) {
           customTorsoView(customTorso);
         }
@@ -98,7 +98,7 @@ const selectedLeg = (clickedLeg) => {
   $('#legs-div').fadeOut(10);
   partsData.loadLegs()
     .then((legs) => {
-      legs.data.forEach((customLeg) => {
+      legs.forEach((customLeg) => {
         if (clickedLeg === customLeg.id) {
           customLegView(customLeg);
         }
